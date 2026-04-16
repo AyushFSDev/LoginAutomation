@@ -1,0 +1,25 @@
+/* src/components/common/Card.module.css */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow-card);
+  transition:
+    box-shadow 0.15s,
+    transform 0.15s,
+    border-color 0.15s;
+}
+.clickable {
+  cursor: pointer;
+}
+.clickable:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-1px);
+}
+.clickable:active {
+  transform: scale(0.985);
+  opacity: 0.85;
+}
+.selected {
+  border: 2px solid var(--accent) !important;
+}

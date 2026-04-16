@@ -1,0 +1,33 @@
+/* src/style/TopProgressBar.module.css */
+
+.bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 9999;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  left: -45%;
+  width: 40%;
+  height: 100%;
+  border-radius: 0 2px 2px 0;
+  background: var(--primary);
+  animation: slide 1.4s ease-in-out infinite;
+}
+
+/* Dark mode — use a lighter green so it's visible on dark bg */
+[data-theme="dark"] .fill {
+  background: #34d399;
+}
+
+@keyframes slide {
+  0%   { left: -45%; }
+  100% { left: 110%; }
+}

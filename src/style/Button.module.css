@@ -1,0 +1,68 @@
+/* src/components/common/Button.module.css */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition:
+    background 0.15s,
+    transform 0.12s,
+    opacity 0.15s;
+  white-space: nowrap;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* variants */
+.primary {
+  background: var(--primary);
+  color: #fff;
+}
+.primary:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.secondary {
+  background: #f3f4f6;
+  color: #374151;
+}
+.secondary:hover:not(:disabled) {
+  background: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1.5px solid var(--border);
+}
+.ghost:hover:not(:disabled) {
+  background: var(--bg-input);
+  transform: translateY(-1px);
+}
+
+/* sizes */
+.sm {
+  padding: 8px 14px;
+  font-size: 13px;
+  border-radius: var(--radius-sm);
+}
+.md {
+  padding: 11px 20px;
+  font-size: 14px;
+  border-radius: var(--radius-md);
+}
+.lg {
+  width: 100%;
+  padding: 15px 0;
+  font-size: 16px;
+  border-radius: var(--radius-md);
+}
